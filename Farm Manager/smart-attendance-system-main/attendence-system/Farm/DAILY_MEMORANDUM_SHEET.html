@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Daily Memorandum Sheet</title>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-control {
+            width: 100%;
+            border: none;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function addRow() {
+            const table = document.getElementById("dataTable");
+            const row = table.insertRow();
+            for (let i = 0; i < 13; i++) {
+                const cell = row.insertCell(i);
+                const input = document.createElement("input");
+                input.type = "text";
+                input.className = "form-control";
+                cell.appendChild(input);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="heading">
+        <h3>SRM COLLEGE OF AGRICULTURAL SCIENCES - SRM IST</h3>
+        <p>Vendhar Nagar, Baburayanpettai, Chengalpattu, District - 603201</p>
+        <h4>DAILY MEMORANDUM SHEET</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Date: <input type="date" class="form-control"></p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p>Weather: <input type="text" class="form-control"></p>
+            </div>
+        </div>
+        <form>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Field Number</th>
+                        <th>Area</th>
+                        <th>Crop</th>
+                        <th>Particulars of Work Done</th>
+                        <th>Tr. Dr. @ Rs.</th>
+                        <th>AM CM @ Rs.</th>
+                        <th>AM CW @ Rs.</th>
+                        <th>CLR CM @ Rs.</th>
+                        <th>CLR CW @ Rs.</th>
+                        <th>SAL CM @ Rs.</th>
+                        <th>SAL CW @ Rs.</th>
+                        <th>Amount Rs.</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary" onclick="addRow()">Add Row</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
